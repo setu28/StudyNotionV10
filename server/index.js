@@ -25,17 +25,16 @@ app.use(cookieParser());
 console.log("Hello");
 app.use(
 	cors({
-		origin:"http://localhost:4000",
-		credentials:true,
+		origin: "*",
+		credentials: true,
 	})
-)
-
+);
 app.use(
 	fileUpload({
-		useTempFiles:true,
-		tempFileDir:"/tmp",
+		useTempFiles: true,
+		tempFileDir: "/tmp/",
 	})
-)
+);
 //cloudinary connection
 cloudinaryConnect();
 
